@@ -5,12 +5,12 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-            <div class="video-banner">
+            <div class="banner__video">
             <video controls autoplay> 
                 <source src='wp-content/themes/foce-child/assets/video/Studio+Koukaki-vidéo+header+sans+son+(1).mp4' type='video/mp4'>
             </video>
             </div>
-            <div class="logo-banner">
+            <div class="banner__logo">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
         </section>

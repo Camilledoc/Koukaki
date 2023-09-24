@@ -27,3 +27,18 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
+//animation fleurs rotate 
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
+    animation: rotate 10s infinite;
+}

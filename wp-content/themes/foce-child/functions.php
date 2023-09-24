@@ -3,7 +3,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/assets/css/stylechild.css' );
-}
+    wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/assets/javascript/script.js', array(), false, true );}
 
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {

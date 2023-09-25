@@ -1,4 +1,8 @@
-//layout video banner//
+:root {
+    --speed: 10s;
+}
+
+//layout banner//
 .banner {
     position: relative;
     height: 100%;
@@ -26,6 +30,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    opacity: 0;
+    animation: fadeIn 2s 500ms ease-in forwards;
+}
+
+//Animation Fade in Page d'accueil 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 //animation fleurs rotate 
@@ -40,5 +56,30 @@
   }
 
 .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
-    animation: rotate 10s infinite;
+    animation: rotate var(--speed) linear infinite;
+}
+
+// redimention des fleurs pour centrer rotation 
+.story h2::after, .site-footer::before {
+  transform-origin: 77px 77px;
+}
+
+.story__article::after {
+    width: 188px;
+    height: 188px;
+}
+
+#studio h2::before {
+    width: 203px;
+    height: 199px;
+}
+
+#studio h2::after {
+    width: 109px;
+    height: 109px;
+}
+
+.site-footer::after {
+    width: 173px;
+    height: 169px;
 }

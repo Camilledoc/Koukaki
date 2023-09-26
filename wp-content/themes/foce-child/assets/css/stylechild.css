@@ -1,1 +1,100 @@
-:root{--speed: 10s}.banner{position:relative;height:100%;overflow:hidden}.banner__video{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:auto;height:auto;z-index:0}.banner__logo{display:flex;justify-content:center;align-items:center;margin-top:-10%;width:80%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:1;opacity:0;animation:fadeIn 2s 500ms ease-in forwards}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.story h2::after,.story__article::after,#studio h2::before,#studio h2::after,.site-footer::before,.site-footer::after{animation:rotate var(--speed) linear infinite}.story h2::after,.site-footer::before{transform-origin:77px 77px}.story__article::after{width:188px;height:188px}#studio h2::before{width:203px;height:199px}#studio h2::after{width:109px;height:109px}.site-footer::after{width:173px;height:169px}/*# sourceMappingURL=stylechild.css.map */
+:root {
+  --speed: 10s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes toUp {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes toDown {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.banner {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.banner__video {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.banner__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10%;
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.story, #studio, .site-footer {
+  animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.story p, #place p, #studio p {
+  animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
+  animation: rotate var(--speed) linear infinite;
+}
+
+.story h2::after, .site-footer::before {
+  transform-origin: 77px 77px;
+}
+
+.story__article::after {
+  width: 188px;
+  height: 188px;
+}
+
+#studio h2::before {
+  width: 203px;
+  height: 199px;
+}
+
+#studio h2::after {
+  width: 109px;
+  height: 109px;
+}
+
+.site-footer::after {
+  width: 173px;
+  height: 169px;
+}
+
+/*# sourceMappingURL=stylechild.css.map */

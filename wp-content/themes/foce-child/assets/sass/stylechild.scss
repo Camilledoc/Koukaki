@@ -2,38 +2,6 @@
     --speed: 10s;
 }
 
-//layout banner//
-.banner {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-}
-
-.banner__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    z-index: 0;
-}
-
-.banner__logo {
-    display: flex;
-	justify-content: center;
-	align-items: center;
-    margin-top: -10%;
-	width: 80%;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    opacity: 0;
-    animation: fadeIn 2s 500ms ease-in forwards;
-}
-
 //Animation Fade in Page d'accueil 
 @keyframes fadeIn {
     from {
@@ -43,9 +11,25 @@
         opacity: 1;
     }
 }
+//Animations trajectoire Page d'accueil 
 
+@keyframes toUp {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes toDown {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
 //animation fleurs rotate 
-
 @keyframes rotate {
     from {
       transform: rotate(0deg);
@@ -55,6 +39,44 @@
     }
   }
 
+//layout banner//
+.banner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.banner__video {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.banner__logo {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-top: -10%;
+	width: 80%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+//animation fade in et trajectoire 
+.story, #studio, .site-footer {
+    animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+.story p, #place p, #studio p {
+    animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
+}
+
+//rotation des fleurs
 .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after {
     animation: rotate var(--speed) linear infinite;
 }

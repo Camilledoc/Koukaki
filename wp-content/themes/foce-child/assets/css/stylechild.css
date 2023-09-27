@@ -100,6 +100,14 @@
   animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
 }
 
+@media (max-width: 920px) {
+  .video, .banner {
+    width: 900px;
+    height: auto;
+    min-height: 500px;
+  }
+}
+
 .banner__logo {
   display: flex;
   justify-content: center;

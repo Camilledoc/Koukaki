@@ -50,6 +50,41 @@
         display: inline-block;
      animation: title 1s 5s ease-in forwards;
 }**/
+@keyframes animation-logo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(5px, 10px);
+  }
+  20% {
+    transform: translate(5px, 15px);
+  }
+  30% {
+    transform: translate(-12px, 13px);
+  }
+  40% {
+    transform: translate(0px, 4px);
+  }
+  50% {
+    transform: translate(-14px, -5px);
+  }
+  60% {
+    transform: translate(2px, -15px);
+  }
+  70% {
+    transform: translate(9px, -7px);
+  }
+  80% {
+    transform: translate(5px, 3px);
+  }
+  90% {
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 .banner {
   position: relative;
   height: 100%;
@@ -69,12 +104,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -10%;
-  width: 80%;
+  margin-top: 2%;
+  width: 100%;
   position: absolute;
   z-index: 1;
   opacity: 0;
-  animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
+  animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards, animation-logo 4200ms 1600ms ease-in-out infinite;
 }
 
 .story, #studio, .site-footer {

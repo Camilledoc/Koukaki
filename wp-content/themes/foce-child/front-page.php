@@ -6,7 +6,7 @@ get_header();
     <main id="primary" class="site-main">
         <section class="banner">
             <div class="banner__video">
-            <video controls autoplay loop muted> 
+            <video class="video" autoplay loop muted> 
                 <source src='wp-content/themes/foce-child/assets/video/Studio+Koukaki-vidéo+header+sans+son+(1).mp4' type='video/mp4'>
             </video>
             </div>

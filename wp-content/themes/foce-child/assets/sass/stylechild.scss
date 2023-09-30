@@ -209,6 +209,12 @@
     width: 52%;
     text-align: left;
     padding : 8rem 4rem 8rem 7rem;
+    @media (max-width: 920px){
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        padding : 3rem;
+        background-size: contain;
+    }
 }
 
 .oscar img {
@@ -217,4 +223,8 @@
     position: relative;
     bottom: 3em;
     right: 2em;
+    @media (max-width: 920px) {
+        width: 20%;
+        height: 20%;
+    }
 }

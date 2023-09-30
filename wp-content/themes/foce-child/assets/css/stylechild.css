@@ -199,6 +199,14 @@
   text-align: left;
   padding: 8rem 4rem 8rem 7rem;
 }
+@media (max-width: 920px) {
+  .oscar h4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 3rem;
+    background-size: contain;
+  }
+}
 
 .oscar img {
   width: 278px;
@@ -206,6 +214,12 @@
   position: relative;
   bottom: 3em;
   right: 2em;
+}
+@media (max-width: 920px) {
+  .oscar img {
+    width: 20%;
+    height: 20%;
+  }
 }
 
 /*# sourceMappingURL=stylechild.css.map */

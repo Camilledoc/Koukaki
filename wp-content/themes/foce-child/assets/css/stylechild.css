@@ -95,7 +95,6 @@
 .banner {
   position: relative;
   height: 100%;
-  overflow: hidden;
   animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
 }
 
@@ -121,8 +120,9 @@
   align-items: center;
   margin-top: 2%;
   width: 100%;
-  position: absolute;
   z-index: 1;
+  position: sticky;
+  top: 5px;
   opacity: 0;
   animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards, animation-logo 4200ms 1600ms ease-in-out infinite;
 }

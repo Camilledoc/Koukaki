@@ -178,7 +178,6 @@
   position: absolute;
   left: 10em;
   top: 3em;
-  size: 50px;
 }
 
 .site-footer::after {
@@ -187,26 +186,26 @@
   top: 0em;
 }
 
-/**
 .oscar h4 {
-    background-image: url("../images/Bg_oscars.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-weight: 700;
-    font-size: 2.7rem;
-    line-height: 4rem;
-    color: #fff5e9;
-    text-shadow: 0px 4px 4px 0px #00000040;
-    ;
-    width: 50%;
-    text-align: left;
-    padding : 0rem 2rem 6rem 2rem;
+  background-image: url("../images/Bg_oscars.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 4rem;
+  color: #fff5e9;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  width: 52%;
+  text-align: left;
+  padding: 8rem 4rem 8rem 7rem;
 }
 
 .oscar img {
-    width: 278px; 
-    height: 129px;
-}**/
+  width: 278px;
+  height: 129px;
+  position: relative;
+  bottom: 3em;
+  right: 2em;
+}
 
 /*# sourceMappingURL=stylechild.css.map */

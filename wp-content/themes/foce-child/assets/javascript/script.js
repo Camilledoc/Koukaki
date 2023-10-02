@@ -21,6 +21,10 @@ const observer = new IntersectionObserver(entries => {
         entry.target.classList.add('anim_title');
       }
     });
+  },{
+    root:null,
+    rootMargin:'0px',
+    threshold:0.5
   });
   
   observer.observe(document.querySelector('.section_title'));
@@ -34,5 +38,40 @@ const observer = new IntersectionObserver(entries => {
     });
   });
   observer2.observe(document.querySelector('.section_title2'));
-
   
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    effect: "coverflow",
+    coverflowEffect: {
+    rotate: 0,                      
+    depth: 200,                     
+    stretch: 60,                    
+    slideShadows: false,            
+    },
+    autoplay: isMobile ? false : {
+    delay: 5000,
+    disableOnInteraction: false,
+    },
+    breakpoints:{
+      0: {
+        slidesPerView: 1,
+      },
+      320:{
+        slidesPerView: 2,
+      },
+      996:{
+        slidesPerView: 3,
+      }
+  }
+  });
+
+  //menu toggle ou hamburger 
+const menuLine = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuLine.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});

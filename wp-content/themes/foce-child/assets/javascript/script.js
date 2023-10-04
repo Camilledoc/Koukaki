@@ -26,6 +26,7 @@ const observer = new IntersectionObserver(entries => {
     rootMargin:'0px',
     threshold:0.5
   });
+  //threshold = numéro entre 0 et 1 soit 0 et 100%, indique quand l'observer se déclenchera, ici à 50%
   
   observer.observe(document.querySelector('.section_title'));
   observer.observe(document.querySelector('.section_title1'));
@@ -67,6 +68,40 @@ const observer = new IntersectionObserver(entries => {
       }
   }
   });
+
+//animation nuage 
+
+
+
+const bigNuage = document.querySelector('.big_cloud');
+const littleNuage = document.querySelector('.little_cloud');
+const initialPositionBig = 1052;
+const initialPositionLittle = 794; 
+
+/* trouver l'emplacement des nuages*/ 
+const positionHorizontaleBig = bigNuage.offsetLeft;
+//console.log(positionHorizontaleBig);
+const positionHorizontaleLittle = littleNuage.offsetLeft;
+//console.log(positionHorizontaleLittle);
+
+document.addEventListener('scroll', () => {
+  let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  console.log(scrollPercent)
+  if ( scrollPercent > 45 ) {
+   bigNuage.style.left = (initialPositionBig - ((scrollPercent-45)*14)) + 'px';
+  } 
+  if ( scrollPercent > 66.5) {
+    bigNuage.style.left = '752px';
+  }
+  if ( scrollPercent > 45 ) {
+    littleNuage.style.left = (initialPositionLittle - ((scrollPercent-45)*14)) + 'px';
+   }
+  if ( scrollPercent > 66.5) {
+    littleNuage.style.left = '494px';
+  }
+ //console.log(bigNuage)
+}
+)
 
   //menu toggle ou hamburger 
 const menuLine = document.querySelector('.menu-toggle');

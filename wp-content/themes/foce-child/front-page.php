@@ -27,10 +27,10 @@ get_header();
                 <div>
                     <h3>Le Lieu</h3>
                     <div> 
-                        <img class='cloud little' src='wp-content/themes/foce-child/assets/images/little_cloud.png' alt='petit nuage'>
+                        <img class='little_cloud' src='wp-content/themes/foce-child/assets/images/little_cloud.png' alt='petit nuage'>
                     </div>
                     <div> 
-                    <img class='cloud big' src='wp-content/themes/foce-child/assets/images/big_cloud.png' alt='gros nuage'>
+                    <img class='big_cloud' src='wp-content/themes/foce-child/assets/images/big_cloud.png' alt='gros nuage'>
                     </div>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>

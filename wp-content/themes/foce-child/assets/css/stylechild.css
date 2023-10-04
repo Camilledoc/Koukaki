@@ -129,7 +129,7 @@
   width: 100%;
   z-index: 1;
   position: sticky;
-  top: 150px;
+  top: 155px;
   opacity: 0;
   animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards, animation-logo 5000ms 1500ms ease-in-out infinite;
 }
@@ -253,19 +253,18 @@
   width: 100%;
 }
 
-.cloud {
-  filter: blur(1rem);
+.little_cloud {
+  filter: blur(0.8rem);
   position: absolute;
-}
-
-.little {
   right: 35%;
-  top: 84%;
+  top: 77%;
 }
 
-.big {
+.big_cloud {
+  filter: blur(0.7rem);
+  position: absolute;
   right: 5%;
-  top: 78%;
+  top: 67%;
 }
 
 .story #place {

@@ -112,6 +112,7 @@
         height: auto;
         position: absolute;
         margin-top: 0;
+        z-index: -1;
     }
 }
 
@@ -283,21 +284,172 @@
   }
 
  //menu toggle ou hamburger 
- .menu-toggle {
-    position : relative;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+ //.main-navigation button {
+   // padding: ;
+
+.main-navigation .site-title {
+    position: absolute;
+    left: 37%;
+    top: 28%;
+    @media (max-width: 767px) {
+        font-size: 14px;
+        left: 25%;
+    }
+}
+ 
+ .toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 30px auto 10px;
+    padding : 38px 0px 0px 0px;
+    position: relative;
+    left : 45%;
+    @media (max-width: 767px) {
+        top: -43%;
+    }
+ }
+  
+ .toggle span:after,
+.toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+.toggle span:after{
+  top: 9px;
+}
+.toggle span {
+  position: relative;
+  display: block;
+}
+
+.toggle span,
+.toggle span:after,
+.toggle span:before {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+.toggle.on span {
+  background-color: transparent;
+}
+.toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+.toggle.on + #fullscreenmenu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 40px;
+  }
+
+ #fullscreenmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-color: #FFF5E9;
+    visibility: hidden;
+    padding: 50px 0px 50px 0px;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    overflow: hidden;
+    .logo-mini {
+        width: 150px; 
+        height: auto;
+        filter: drop-shadow(0 0 0.60rem #FF5C00); ;
+    }
+        a {
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 50px;
+        @media (max-width: 920px) {
+            font-size: 32px;
+        }
+    }
+    a:hover {
+        text-shadow: #FF5C00 1px 0 10px;
+        color:black;
+    }
+
+    p {
+        margin-bottom: -30px;
+        margin-top: 45px;
+        font-family: "Roboto Mono", monospace;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .cat {  
+        position: absolute;
+        width: 9%;
+        left: 353px;
+        top: 124px;
+        animation : animation-logo 8000ms 300ms ease-in-out infinite;
+    }
+    .cat-1 {
+        position: absolute;
+        width: 7%;
+        left: 98px;
+        bottom: 31px;
+        animation : animation-logo 8000ms 1500ms ease-in-out infinite;
+    }
+    .cat-2 {
+        position: absolute;
+        width: 8%;
+        right: 170px;
+        bottom:175px;
+        animation : animation-logo 8000ms 1000ms ease-in-out infinite;
+    }
+
+    .flower {
+        position: absolute;
+        width: 4%;
+        left: 248px;
+        bottom: 201px;
+    }
+    .flower-1 {
+        position: absolute;
+        width: 22%;
+        right: -156px;
+        bottom: -169px;
+    }
+    .flower-2 {
+        position: absolute;
+        left: -55px;
+   }
+    .flower-3 {
+    position: absolute;
+    width: 4%;
+    right: -29px;
+    top: 297px;
+    }
+    .flower-4 {
+    position: absolute;
+    width: 12%;
+    right: 212px;
+    }
+
+    .flower, .flower-1, .flower-2, .flower-3, .flower-4 {
+    animation: rotate 7s linear infinite;
+    }
  }
 
- .menu-toggle .line {
-    display: block;
-    width: 100%;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: black;
-    transform-origin: center;
+ //menu responsive 
+ .cat, .cat-1, .cat-2, .flower, .flower-1, .flower-2, .flower-3, .flower-4 {
+    @media (max-width: 767px) {
+        display: none;
+    }
  }

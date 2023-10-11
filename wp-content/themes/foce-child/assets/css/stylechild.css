@@ -236,10 +236,20 @@
   }
 }
 
+.main-character h3 {
+  text-align: left;
+  padding: 1em 1em;
+}
+
+.story #characters h3 {
+  background-position: left;
+}
+
 .swiper {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .swiper-slide {
@@ -272,6 +282,10 @@
   background-image: url("../images/Studio_Koukaki-image_place.png");
 }
 
+.main-navigation button {
+  margin: 0 auto;
+}
+
 .main-navigation .site-title {
   position: absolute;
   left: 37%;
@@ -282,6 +296,10 @@
     font-size: 14px;
     left: 25%;
   }
+}
+
+.site-title:hover {
+  color: black;
 }
 
 .toggle {
@@ -327,7 +345,6 @@
   border-radius: 2px;
 }
 
-/* on activation */
 .toggle.on span {
   background-color: transparent;
 }

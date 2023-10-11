@@ -1,4 +1,4 @@
-//animation fleurs en rotation au scroll 
+//animation rotating scroll flowers //
 const root=document.querySelector(':root');
 
 
@@ -10,7 +10,7 @@ document.addEventListener('scrollend', function(){
     root.style.setProperty('--speed', '10s');
     })
 
-//animaiton titres section 
+//animation section title // 
 // Create the observer
 const observer = new IntersectionObserver(entries => {
     // Loop over the entries
@@ -26,7 +26,6 @@ const observer = new IntersectionObserver(entries => {
     rootMargin:'0px',
     threshold:0.5
   });
-  //threshold = numéro entre 0 et 1 soit 0 et 100%, indique quand l'observer se déclenchera, ici à 50%
   
   observer.observe(document.querySelector('.section_title'));
   observer.observe(document.querySelector('.section_title1'));
@@ -39,6 +38,8 @@ const observer = new IntersectionObserver(entries => {
     });
   });
   observer2.observe(document.querySelector('.section_title2'));
+
+  //swiper characters //
   
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const swiper = new Swiper('.swiper', {
@@ -69,16 +70,14 @@ const observer = new IntersectionObserver(entries => {
   }
   });
 
-//animation nuage 
-
-
+//animation clouds // 
 
 const bigNuage = document.querySelector('.big_cloud');
 const littleNuage = document.querySelector('.little_cloud');
 const initialPositionBig = 1052;
 const initialPositionLittle = 794; 
 
-/* trouver l'emplacement des nuages*/ 
+//find clouds position  
 const positionHorizontaleBig = bigNuage.offsetLeft;
 //console.log(positionHorizontaleBig);
 const positionHorizontaleLittle = littleNuage.offsetLeft;
@@ -86,7 +85,7 @@ const positionHorizontaleLittle = littleNuage.offsetLeft;
 
 document.addEventListener('scroll', () => {
   let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  console.log(scrollPercent)
+  //console.log(scrollPercent)
   if ( scrollPercent > 45 ) {
    bigNuage.style.left = (initialPositionBig - ((scrollPercent-45)*14)) + 'px';
   } 
@@ -103,7 +102,7 @@ document.addEventListener('scroll', () => {
 }
 )
 
-  //menu toggle ou hamburger 
+//menu toggle //
   const theToggle = document.querySelector('.toggle');
 
 // hasClass
@@ -118,7 +117,7 @@ function addClass(elem, className) {
 }
 // removeClass
 function removeClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	let newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
 	if (hasClass(elem, className)) {
         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
             newClass = newClass.replace(' ' + className + ' ', ' ');
@@ -128,7 +127,7 @@ function removeClass(elem, className) {
 }
 // toggleClass
 function toggleClass(elem, className) {
-	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+	let newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
     if (hasClass(elem, className)) {
         while (newClass.indexOf(" " + className + " ") >= 0 ) {
             newClass = newClass.replace( " " + className + " " , " " );
@@ -139,7 +138,19 @@ function toggleClass(elem, className) {
     }
 }
 
+//menu open and close 
 theToggle.onclick = function() {
    toggleClass(this, 'on');
    return false;
 }
+
+const liens = document.querySelectorAll('#fullscreenmenu a');
+
+//console.log(liens);
+liens.forEach(function(lien) {
+  lien.addEventListener('click', function() {
+    //console.log('on/off');
+    toggleClass(document.querySelector('.toggle'), 'on');
+  }
+  )
+})

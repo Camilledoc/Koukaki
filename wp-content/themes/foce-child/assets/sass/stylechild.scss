@@ -2,7 +2,7 @@
     --speed: 10s;
 }
 
-//Animation Fade in Page d'accueil 
+//Animation Fade in Front page 
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -11,7 +11,7 @@
         opacity: 1;
     }
 }
-//Animations trajectoire Page d'accueil 
+//Animations up and down (trajectory) Front page 
 
 @keyframes toUp {
     from {
@@ -29,7 +29,7 @@
         transform: translateY(0px);
     }
 }
-//animation fleurs rotate 
+//animation rotate flowers 
 @keyframes rotate {
     from {
       transform: rotate(0deg);
@@ -39,7 +39,7 @@
     }
   }
 
-  //animation titre section 
+  //animation section titles 
   @keyframes title {
     from {
         transform: translateY(110%);
@@ -64,7 +64,7 @@
     animation: title 800ms 350ms cubic-bezier(1,.1,.85,.77) forwards;
 }
 
-//animation mouvements logo
+//animation logo movements
 @keyframes animation-logo {
     0% {
         transform: translate(0px,0px)
@@ -144,7 +144,7 @@
     animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards, animation-logo 5000ms 1500ms ease-in-out infinite;
 }
 
-//animation fade in et trajectoire 
+//animation fade in et trajectory 
 .story, #studio, .site-footer {
     animation: toUp 1500ms 0ms ease forwards, fadeIn 900ms 0s ease-in forwards;
 }
@@ -153,12 +153,12 @@
     animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
 }
 
-//rotation des fleurs
+// flowers rotation
 .story h2::after, .story__article::after, #studio h2::before, #studio h2::after, .site-footer::before, .site-footer::after, .site-footer ul::after {
     animation: rotate var(--speed) linear infinite;
 }
 
-// redimention des fleurs pour centrer rotation 
+// Resize flower centers for rotation 
 .story h2::after, .site-footer::before {
   transform-origin: 77px 77px;
 }
@@ -183,7 +183,7 @@
     height: 169px;
 }
 
-//mise en page oscar 
+//Layout Oscar template parts 
 #colophon {
     display: flex;
     flex-direction: column;
@@ -245,11 +245,21 @@
         height: 20%;
     }
 }
-//swiper characters 
+//layout characters template parts
+
+.main-character h3 {
+    text-align: left;
+    padding: 1em 1em;
+}
+.story #characters h3 {
+background-position: left; 
+}
+
 .swiper {
-    width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 80vw;
+    margin: 0 auto;
   }
 
   .swiper-slide {
@@ -264,7 +274,7 @@
     width: 100%;
   }
 
-  //lieu nuages 
+  //layout clouds place  
   .little_cloud {
     filter:blur(0.8rem); 
     position: absolute;
@@ -283,9 +293,10 @@
     background-image: url("../images/Studio_Koukaki-image_place.png");
   }
 
- //menu toggle ou hamburger 
- //.main-navigation button {
-   // padding: ;
+ //menu toggle 
+ .main-navigation button {
+    margin : 0 auto;
+ }
 
 .main-navigation .site-title {
     position: absolute;
@@ -297,6 +308,10 @@
     }
 }
  
+.site-title:hover {
+    color:black;
+}
+
  .toggle {
     display: block;
     width: 30px;
@@ -336,7 +351,7 @@
   border-radius: 2px;
 }
 
-/* on activation */
+//menu on activation 
 .toggle.on span {
   background-color: transparent;
 }

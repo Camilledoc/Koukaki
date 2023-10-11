@@ -104,6 +104,7 @@
 //layout banner//
 .banner {
     background-image: none;
+    margin-bottom: 5px;
     position: relative;
     height: 100%;
     animation: toDown 1500ms 0s ease forwards, fadeIn 900ms 0s ease-in forwards;
@@ -258,7 +259,7 @@ background-position: left;
 .swiper {
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
   }
 
@@ -271,7 +272,7 @@ background-position: left;
 
   .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 80%;
   }
 
   //layout clouds place  

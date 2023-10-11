@@ -2,23 +2,32 @@
 <article id="characters">
     <div class="main-character">
      <h3>Les personnages</h3>
+<?php
+$args = array(
+  'post_type' => 'characters', 
+  'posts_per_page' => -1, 
+  'meta_key' => '_main_char_field', 
+  'order_by' => 'mata_value_num',
+);
+$characters_query = new WP_Query($args); 
+?>
+
 <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="<?php echo get_theme_file_uri ('../foce-child/assets/images/kawaneko.png'); ?>" ;>
-      </div>
-    <div class="swiper-slide">
-    <img src="<?php echo get_theme_file_uri ('../foce-child/assets/images/orenjiiro.png'); ?>" ;>
-    </div>
-    <div class="swiper-slide">
-    <img src="<?php echo get_theme_file_uri ('../foce-child/assets/images/pinku.png'); ?>" ;>
-    </div>
-    <div class="swiper-slide">
-    <img src="<?php echo get_theme_file_uri ('../foce-child/assets/images/tenshi.png'); ?>" ;>
-    </div>
-    <div class="swiper-slide">
-    <img src="<?php echo get_theme_file_uri ('../foce-child/assets/images/jaakuna.png'); ?>" ;>
-    </div>
+     <?php
+  while ($characters_query->have_posts() ) {
+    $characters_query->the_post();
+    echo '<div class="swiper-slide">'; 
+    echo '<figure>'; 
+    echo get_the_post_thumbnail( get_the_ID(), 'full');
+    echo '<figcaption>'; 
+    the_title();
+    echo '</figcaption>';
+    echo '</figure>'; 
+    echo '</div>';
+  }      
+  ?>
+
   </div>
 </div>
 </div>

@@ -30,7 +30,7 @@
     
 		<nav id="site-navigation" class="main-navigation">
         <div class="menu">
-                <a class="site-title"href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </div>
             <button class="toggle">
             <a href="#fullscreenmenu"></a>

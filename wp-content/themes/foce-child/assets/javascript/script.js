@@ -53,15 +53,18 @@ const observer = new IntersectionObserver(entries => {
     stretch: 60,                    
     slideShadows: false,            
     },
-    autoplay: isMobile ? false : {
+    autoplay: isMobile ? true : {
     delay: 5000,
     disableOnInteraction: false,
     },
     breakpoints:{
       0: {
-        slidesPerView: 1,
+        slidesPerView: 0,
       },
       320:{
+        slidesPerView: 1,
+      },
+      667:{
         slidesPerView: 2,
       },
       996:{

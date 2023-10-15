@@ -7,7 +7,7 @@ get_header();
         <section class="banner">
             <div class="banner__video">
             <video class="video" autoplay loop muted> 
-                <source src='wp-content/themes/foce-child/assets/video/Studio+Koukaki-vidéo+header+sans+son+(1).mp4' type='video/mp4'>
+                <source src='wp-content/themes/foce-child/assets/video/Studio+Koukaki-video+header+sans+son+(1).mp4' type='video/mp4'>
             </video>
             </div>
             <img class="banner_fallback" src="<?php echo get_stylesheet_directory_uri().'/assets/images/banner.png';?>" alt="fleurdorangeretchatserrants">
@@ -17,7 +17,7 @@ get_header();
         </section>
         <section id="story" class="story">
             <h2><span class="section_title">L'histoire</span></h2>
-            <article id="" class="story__article">
+            <article class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
 

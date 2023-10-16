@@ -32,11 +32,9 @@
         <div class="menu">
             <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         </div>
-            <button class="toggle">
-            <a href="#fullscreenmenu">
+            <a href="#fullscreenmenu" class="toggle">
             <span></span>
             </a>
-            </button>
             <ul id="fullscreenmenu">
             <li><img class="logo-mini" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></li>
                 <li><a href="#story">Histoire</a></li>

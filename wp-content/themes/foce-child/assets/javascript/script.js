@@ -3,11 +3,11 @@ const root=document.querySelector(':root');
 
 
 document.addEventListener('scroll', function(){
-root.style.setProperty('--speed', '2s');
+root.style.setProperty('--speed', '10s');
 })
 
 document.addEventListener('scrollend', function(){
-    root.style.setProperty('--speed', '10s');
+    root.style.setProperty('--speed', '2s');
     })
 
 //animation section title // 

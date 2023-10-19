@@ -118,7 +118,7 @@
         width: 100%;
         height: auto;
         position: absolute;
-        margin-top: 0;
+        margin-top: -16px;
         z-index: -1;
     }
 }
@@ -289,8 +289,6 @@ background-position: left;
 }
 
 .swiper {
-    padding-top: 50px;
-    padding-bottom: 50px;
     width: 70vw;
     margin: 0 auto;
     @media (max-width: 767px) {
@@ -386,7 +384,7 @@ background-position: left;
     display: block;
     width: 30px;
     height: 30px;
-    margin: 30px auto 10px;
+    margin: 0px auto 10px;
     padding: 38px 0px 0px 0px;
     position: relative;
     left: 45%;
@@ -434,7 +432,7 @@ background-position: left;
 .toggle.on + #fullscreenmenu {
   opacity: 1;
   visibility: visible;
-  margin-top: 40px;
+  margin-top: 30px;
   @media (max-width: 767px) {
     margin-top: -10px;
     }
